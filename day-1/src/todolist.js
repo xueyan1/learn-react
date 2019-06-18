@@ -12,6 +12,10 @@ class TodoList extends React.Component {
             inputValue: ''
         }
 
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleBtnClick = this.handleBtnClick.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
+
     }
     //按钮增加事件
     handleBtnClick() {
@@ -46,19 +50,31 @@ class TodoList extends React.Component {
         })
     }
 
+    //获取每个item的数据
+    getItem() {
+        return (
+            this.state.list.map((item, index) => {
+                return (
+                    <TodoItem
+                        deleteItem={this.handleDelete}
+                        key={index}
+                        content={item}
+                        index={index}
+                    />);
+            })
+        )
+    }
     //父组件通过属性的形式向子组件传递参数
     //子组件通过props接受父组件传递过来的参数
     render() {
         return (
             <div>
                 <div>
-                    <input value={this.state.inputValue} onChange={this.handleInputChange.bind(this)}></input>
-                    <button onClick={this.handleBtnClick.bind(this)}>add</button>
+                    <input value={this.state.inputValue} onChange={this.handleInputChange}></input>
+                    <button onClick={this.handleBtnClick}>add</button>
                 </div>
                 <ul>
-                    {this.state.list.map((item, index) => {
-                        return <TodoItem delete={this.handleDelete.bind(this)} key={index} content={item} index={index} />
-                    })}
+                    {this.getItem()}
                 </ul>
             </div>
         );
