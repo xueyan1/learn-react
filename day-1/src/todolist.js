@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './todoitem';
+import './css/style.css'
 class TodoList extends React.Component {
     constructor(props) {
         super(props);
@@ -71,7 +72,7 @@ class TodoList extends React.Component {
             <div>
                 <div>
                     <input value={this.state.inputValue} onChange={this.handleInputChange}></input>
-                    <button onClick={this.handleBtnClick}>add</button>
+                    <button className='redBtn' onClick={this.handleBtnClick}>add</button>
                 </div>
                 <ul>
                     {this.getItem()}

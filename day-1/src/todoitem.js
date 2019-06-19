@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './css/style.css'
 class TodoItem extends React.Component {
     constructor(props) {
         super(props)
@@ -13,7 +13,7 @@ class TodoItem extends React.Component {
     render() {
         const { content } = this.props;
         return (
-            <div onClick={this.handleDelete}>{content}</div>
+            <div className='item' onClick={this.handleDelete}>{content}</div>
         )
     }
 }

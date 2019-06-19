@@ -1,0 +1,14 @@
+.redBtn{
+    background: rebeccapurple;
+    color: white
+}
+.item{
+    width: 16em;
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    background-color: aquamarine;
+    color: rebeccapurple;
+    margin-top: 1em;
+    padding: 0.5em 0;
+}
