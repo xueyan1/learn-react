@@ -1,0 +1,8 @@
+/node_modules
+project.config.json
+ext.json
+.vscode
+.idea
+.DS_Store
+.eslintignore
+*/.DS_Store
