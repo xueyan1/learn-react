@@ -12,7 +12,7 @@
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-router": "^7.4.0",
-    "webpack": "^4.34.0",
+    "webpack": "^5.75.0",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
